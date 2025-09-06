@@ -1,12 +1,13 @@
 import { Resend } from 'resend';
 import { EmailTemplate } from '@/app/componentes';
-import z from 'zod';
-import { formSchemaSolicitudEmpleo } from '@/app/hooks';
+import { NextRequest } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST({datos, titulo, pdf}: {datos: z.infer<typeof formSchemaSolicitudEmpleo>, titulo: string, pdf: string}) {
+export async function POST(request: NextRequest) {
   try {
+    const {datos, pdf, titulo} = await request.json();
+
     const { data, error } = await resend.emails.send({
       from: 'Vacantes-Castillo <onboarding@resend.dev>',
       to: ['delivered@resend.dev'],
