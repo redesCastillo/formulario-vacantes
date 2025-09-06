@@ -3,7 +3,6 @@ import { formSchemaSolicitudEmpleo, validarVacante } from "@/app/hooks";
 import {zodResolver} from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
-import { POST } from "@/app/api/send/route";
 import { useState } from "react";
 import { CldUploadWidget } from "next-cloudinary";
 
@@ -25,8 +24,23 @@ export function FormularioPostulacion({id}: {id: string}) {
             alert("La vacante no existe o ya fue eliminada");
         }
         else {
-            // enviar el correo 
-            await POST({datos: data, titulo: res, pdf: pdf});
+            // enviar el correo
+            try {
+                const enviarCorreo = await fetch("/api/send", {
+                    body: JSON.stringify({data, pdf, titulo: res}),
+                    headers: {"Content-Type": "aplicacion/json"},
+                    method: "POST"
+                })
+    
+                if (enviarCorreo.ok) {
+                    alert("Solicitud enviada correctamente")
+                }else {
+                    alert("Ocurrio un error")
+                }
+                
+            } catch (error) {
+                console.log("Ocurrio un error al enviar el correo de la solicitud: ", error)
+            }
             // console.log(data);
         }
   }
