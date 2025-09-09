@@ -1,0 +1,98 @@
+.footer {
+            background: #e4717a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            animation: shine 3s infinite;
+        }
+
+        .contact-info span {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            align-items: center;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .double h4:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        footer details summary {
+          color: var(--gold);
+          cursor: pointer;
+        }
+
+        footer details ul {
+          list-style: none;
+          padding: 0;
+          margin-top: 10px;
+        }
+
+        footer details ul li {
+          margin: 8px 0;
+          color: var(--text-gray);
+          font-size: 0.9rem;
+        }

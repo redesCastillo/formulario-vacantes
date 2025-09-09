@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.job-description {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #e4717a;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.botonEliminar {
+    background-color: #ac1c1c;
+    padding: 10px 20px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botonEliminar:hover {
+    background-color: #860505;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        max-width: 80vw;
+        margin: auto;
+    }
+}
+
+.job-description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
