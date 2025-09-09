@@ -22,10 +22,11 @@ export default function IniciarSesion() {
         try {
             const res = await iniciarSesion(data);
 
-            if (!res) {
-                alert("EL usuario y/o ocntraseña ingresados son incorrectos")
-            }else {
+            if (res) {
                 router.push("/registrar-vacante");
+                
+            }else {
+                alert("EL usuario y/o ocntraseña ingresados son incorrectos")
             }
 
         } catch (error) {
@@ -58,4 +59,5 @@ export default function IniciarSesion() {
 
         </div>
     );
+
 }
