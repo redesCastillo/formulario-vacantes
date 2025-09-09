@@ -1,3 +1,4 @@
+"use client";
 import "./page.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -84,4 +85,5 @@ export function Vacantes({admin}: {admin: boolean}) {
 //         requisitos: ["Experiencia en limpieza", "Atención al detalle", "Capacidad para trabajar de manera independiente"],
 //         beneficios: ["Salario competitivo", "Descuentos en alojamiento y alimentos", "Oportunidades de crecimiento profesional"]
 //     }
+
 // ];
