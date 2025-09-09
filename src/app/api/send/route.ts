@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: 'Vacantes-Castillo <onboarding@resend.dev>',
-      to: ['delivered@resend.dev'],
+      to: ['recursoshumanos@hotelcastillohuatulco.com'],
       subject: 'Nueva solicitud',
       react: EmailTemplate({ data: datos, pdf: pdf, titulo: titulo }),
     });
@@ -23,4 +23,5 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     return Response.json({ error }, { status: 500 });
   }
+
 }
