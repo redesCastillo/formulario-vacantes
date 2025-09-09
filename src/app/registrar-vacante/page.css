@@ -1,0 +1,122 @@
+body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8f2f7 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(43, 87, 151, 0.1);
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: linear-gradient(135deg, #2b5797 0%, #1a4480 100%);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-header img {
+            filter: drop-shadow(0 2px 2px #000);
+        }
+
+        .form-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(228, 113, 122, 0.1) 0%, transparent 50%);
+        }
+
+        .form-title {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .formulario-registro {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: #000;
+        }
+
+        .formulario-registro div:not(:first-child) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 600px;
+            gap: 5px;
+        }
+
+        .formulario-registro input {
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            margin-left: 10px;
+            color: #2b5797;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        .formulario-registro input:focus {
+            border-bottom-color: #2b5797;
+        }
+
+        #descripcion, #requisitos, #beneficios {
+            background: transparent;
+            border: 2px solid #ccc;
+            outline: none;
+            color: #2b5797;
+            padding: 3px;
+            border-radius: 5px;
+            width: 100%;
+            min-height: 80px;
+            resize: none;
+        }
+
+        .boton {
+            background-color: #2b5797;
+            padding: 10px 20px;
+            letter-spacing: 1.5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: #1a4480;
+        }
+
+        .divSesion {
+            display: flex;
+            justify-content: center;
+        }
+
+        .botonCerrarSesion {
+            background-color: #ac1c1c;
+            padding: 10px 20px;
+            letter-spacing: 1.5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .botonCerrarSesion:hover {
+            background-color: #860505;
+        }
