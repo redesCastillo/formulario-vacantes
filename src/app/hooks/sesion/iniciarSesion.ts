@@ -27,6 +27,7 @@ export const iniciarSesion = async (data: z.infer<typeof formSchemaLogin>) => {
 
             if (match) {
                 await createSession(data.usuario);
+                return true;
             }
             else {
                 return false;
@@ -37,4 +38,5 @@ export const iniciarSesion = async (data: z.infer<typeof formSchemaLogin>) => {
     } catch (error) {
         console.log("Ocurrio un error al asignar un token de sesion: ", error);
     }
+
 };
