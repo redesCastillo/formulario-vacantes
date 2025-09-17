@@ -13,7 +13,7 @@ export function Pie() {
                 <h4>💼 Recursos Humanos</h4>
                 <div className="contact-info">
                     <span>
-                        <a href="tel:+52">Tel: +52 123 456 789</a>
+                        <a href="tel:+52">Tel: +52 958 58 701 44 EXT. 615</a>
                     </span>
                     <span>
                         <a href="mailto:recursoshumanos@hotelcastillohuatulco.com">Email: recursoshumanos@hotelcastillohuatulco.com </a>
@@ -33,4 +33,5 @@ export function Pie() {
         </div>
     </footer>
     )
+
 }
