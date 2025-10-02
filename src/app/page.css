@@ -7,7 +7,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #2b5797 0%, #1a4480 50%, #0d2f5c 100%);
+            background: linear-gradient(135deg, #3871c5 0%, #2664b9 50%, #185bb3 100%);
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -23,7 +23,7 @@
         }
 
         .header img {
-            filter: drop-shadow(0 2px 2px #000);
+            filter: drop-shadow(0 2px 2px #eee);
         }
 
         .header-content {
@@ -77,5 +77,23 @@
 
             .header {
                 transform: scale(1);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header-content {
+                display: block;
+            }
+
+            .container h2 {
+                text-align: center;
+            }
+
+            .footer-section {
+                width: 90vw;
+            }
+
+            .footer-section iframe {
+                width: 100%;
             }
         }
