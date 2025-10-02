@@ -21,9 +21,9 @@ export function Pie() {
                 </div>
                 <h4>🌐 Síguenos</h4>
                 <p className="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Indeed</a>
+                    <a href="https://www.linkedin.com/company/hotel-castillo-huatulco/" target="_BLANK" rel="noreferrer">LinkedIn</a>
+                    <a href="https://www.facebook.com/hotelcastillohux/" target="_BLANK" rel="noreferrer">Facebook</a>
+                    <a href="https://mx.indeed.com/cmp/Hotel-Castillo-Huatulco" target="_BLANK" rel="noreferrer">Indeed</a>
                 </p>
             </div>
         </div>
@@ -35,3 +35,4 @@ export function Pie() {
     )
 
 }
+
