@@ -29,7 +29,3 @@ export default function Home() {
   );
 }
 
-
-bcrypt.hash("rrhh2025", 10, (err, hash)=> {
-  console.log("Contraseña hasheada: ", hash)
-})
